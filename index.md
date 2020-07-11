@@ -1,128 +1,53 @@
 ---
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
+layout: post
+title:  "雪盈证券 Open Api 接入文档"
+categories: api
 ---
 
-[Link to another page](./overview.html).
+# 接入准备
 
-[Link to another page](./overview.markdown).
+## 开户入金
 
-[Link to another page](./_post/overview.html).
+开发者在接入雪盈证券开发平台之前，需要提前开通雪盈账号。账号开通后，您可以自己的账号ID（以后统称为：account id）作为您账号的唯一标识。
 
-[Link to another page](./_post/overview.markdown).
+### 开户地址
 
-There should be whitespace between paragraphs.
+[开户链接](https://www.snowballsecurities.com/xy-account-open/phone-verify)
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+> `https://www.snowballsecurities.com/xy-account-open/phone-verify`
 
-# Header 1
+### 查看账户 ID
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+登录雪盈证券APP，查找“我的-设置-账号与安全”，即可看到雪盈账号 ID。
 
-## Header 2
+### 申请密钥
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+获取自己的 accountId 后可以在雪盈官网-申请 API，来注册开发者信息，注册后将获得您自己的专属密钥（以后统称为：secret key）作为您登录雪盈开发平台的唯一凭证，请妥善保存。
 
-### Header 3
+[注册地址](https://www.snowballsecurities.com)
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+> `https://www.snowballsecurities.com`
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+## 环境说明
 
-#### Header 4
+雪盈证券为API开发者提供两套环境，分别是sit测试环境和prod测试环境，现对这两套环境做分别说明。
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+| **环境** | **环境名称** | **链接方式**                             | **账号获取**     |
+| -------- | ------------ | ---------------------------------------- | ---------------- |
+| sit      | 测试环境     | `https://sandbox.snbsecurities.com:8080` | 联系雪盈客服获得 |
+| prod     | 正式环境     | `https:// openapi.snbsecurities.com:443` | 参考1.1和1.2     |
 
-##### Header 5
+>  **PORD**  环境中用户账号、资金均为真实账号、资金，所做操作全部真实有效，请**勿**做测试操作。
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+# 接入方式
 
-###### Header 6
+* [HttpApi](/api)
+* [PythonSDK](/python)
+* [JavaSDK](/java)
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+# 更新日志
 
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+| 更新日期   | 更新内容                         |
+| ---------- | -------------------------------- |
+| 2020-06-08 | 初始化更新                       |
+| 2020-07-08 | 更新至当前最新安装方式与连接方式 |
