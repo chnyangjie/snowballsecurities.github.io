@@ -42,7 +42,7 @@ maven：
 </dependencies>
 ```
 
-github：http://git.snowballfinance.com/snowballsecurities/snowx-ss-api.git
+github：https://github.com/snowballsecurities/snowx-ss-api-java-sdk
 
 ### 1.4环境说明
 
@@ -696,7 +696,6 @@ SDK用到的枚举全部集中在SnowXConstant的内部类中，现对其各属�
 | **名称** | **描述**           |
 |----------|--------------------|
 | STK      | 股票               |
-| CS       | 股票               |
 | FUT      | 期货               |
 | OPT      | 期权               |
 | FOP      | 期货期权           |
