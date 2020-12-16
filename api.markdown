@@ -287,7 +287,7 @@ curl -H"Accept:application/vnd.snowx+json; version=1.0" -H"Cookie:access_token=d
 | ----------- | ---- | ------ | ----------- | -------- |
 | account_id  | 是   | string | 账户 ID     | 1.0      |
 | original_id | 是   | string | 原始订单 ID | 1.0      |
-| id          | 是   | string | 新订单 ID   | 1.0      |
+| new_id      | 是   | string | 新订单 ID   | 1.0      |
 
 返回结果:
 
