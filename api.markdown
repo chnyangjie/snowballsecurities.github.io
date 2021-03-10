@@ -225,7 +225,7 @@ curl -H"Accept:application/vnd.snowx+json; version=1.0" -H"Cookie:access_token=d
 | tif              | 否   | enum    | 订单有效期   | 1.0  |
 | rth              | 否   | boolean | 仅限盘中交易 | 1.0  |
 | status           | 是   | enum    | 订单状态     | 1.0  |
-| filled_quantit y | 是   | enum    | 已成交数量   | 1.0  |
+| filled_quantity | 是   | enum    | 已成交数量   | 1.0  |
 | order_time       | 是   | long    | 下单时间     | 1.0  |
 
 ## 成交查询
@@ -247,8 +247,8 @@ curl -H"Accept:application/vnd.snowx+json; version=1.0" -H"Cookie:access_token=d
 | size            | 否   | int  | 每页条数，最大 500，默认值:10 | 1.0  |
 | --------------- | ---- | ---- | ----------------------------- | ---- |
 | side            | 否   | enum | 买卖方向                      | 1.0  |
-| order_time_m in | 否   | int  | 下单时间左区间，时间戳(秒)    | 1.0  |
-| order_time_m ax | 否   | int  | 下单时间右区间，时间戳(秒)    | 1.0  |
+| order_time_min | 否   | int  | 下单时间左区间，时间戳(毫秒)    | 1.0  |
+| order_time_max | 否   | int  | 下单时间右区间，时间戳(毫秒)    | 1.0  |
 
 返回结果:
 
@@ -342,15 +342,15 @@ curl -H"Accept:application/vnd.snowx+json; version=1.0" -H"Cookie:access_token=d
 
 | 变量名                                | 必填 | 类型   | 描述         | 支持版本 |
 | ------------------------------------- | ---- | ------ | ------------ | -------- |
-| net_liquidatio n_value                | 是   | double | 净资产       | 1.0      |
-| equity_with_l oan_value               | 是   | double | 总资产       | 1.0      |
-| previous_day_ equity_with_l oan_value | 是   | double | 昨日总资产   | 1.0      |
-| securities_gro ss_position_v alue     | 是   | double | 证券总价值   | 1.0      |
+| net_liquidation_value                | 是   | double | 净资产       | 1.0      |
+| equity_with_loan_value               | 是   | double | 总资产       | 1.0      |
+| previous_day_equity_with_loan_value | 是   | double | 昨日总资产   | 1.0      |
+| securities_gross_position_value     | 是   | double | 证券总价值   | 1.0      |
 | sma                                   | 是   | double |              | 1.0      |
 | cash                                  | 是   | double | 账户金额     | 1.0      |
-| current_availa ble_funds              | 是   | double | 可用资金     | 1.0      |
-| current_exces s_liquidity             | 是   | double | 剩余流动性   | 1.0      |
+| current_available_funds              | 是   | double | 可用资金     | 1.0      |
+| current_excess_liquidity             | 是   | double | 剩余流动性   | 1.0      |
 | leverage                              | 是   | double | 杠杆，GPV/NL | 1.0      |
-| current_initial _margin               | 是   | double | 初始保证金   | 1.0      |
-| current_maint enance_margi n          | 是   | double | 维持保证金   | 1.0      |
+| current_initial_margin               | 是   | double | 初始保证金   | 1.0      |
+| current_maintenance_margin          | 是   | double | 维持保证金   | 1.0      |
 | currency                              | 是   | enum   | 币种         | 1.0      |
