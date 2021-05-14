@@ -84,18 +84,19 @@ categories: api
 
 ## OrderStatus
 
-| 名称               | 描述     |
-| ------------------ | -------- |
-| NO_REPORT          | 未报     |
-| WAIT_REPORT        | 待报     |
-| REPORTED           | 已报     |
-| WAIT_WITHDRAW      | 已报待撤 |
-| PART_WAIT_WITHDRAW | 部成待撤 |
-| PART_WITHDRAW      | 部撤     |
-| WITHDRAWED         | 已撤     |
-| PART_CONCLUDED     | 部成     |
-| CONCLUDED          | 已成     |
-| INVALID            | 废单     |
+| 名称               | 描述     |是否终态|是否可撤单|
+| ------------------ | -------- |--------|----------|
+| NO_REPORT          | 未报     | 否     | 否       |
+| WAIT_REPORT        | 待报     | 否     | 否       |
+| REPORTED           | 已报     | 否     | 是       |
+| WAIT_WITHDRAW      | 已报待撤 | 否     | 否       |
+| PART_WAIT_WITHDRAW | 部成待撤 | 否     | 否       |
+| PART_WITHDRAW      | 部撤     | 是     | 否       |
+| WITHDRAWED         | 已撤     | 是     | 否       |
+| PART_CONCLUDED     | 部成     | 否     | 是       |
+| CONCLUDED          | 已成     | 是     | 否       |
+| INVALID            | 废单     | 是     | 否       |
+| EXPIRED            | 过期     | 是     | 否       |
 
 ## TimeInForce
 
