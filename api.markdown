@@ -133,7 +133,7 @@ curl -H"Accept:application/vnd.snowx+json; version=1.0" -H"Cookie:access_token=d
 | account_id    | 是   | string  | 账户 ID                                  | 1.0      |
 | security_type | 是   | enum    | 证券类型，见:数据字典                    | 1.0      |
 | symbol        | 是   | string  | 证券代码                                 | 1.0      |
-| exchange      | 是   | string  | 市场                                     | 1.0      |
+| exchange      | 是   | string  | 市场，（使用空字符串，将自动选择最优交易所）  | 1.0      |
 | order_type    | 是   | enum    | 订单类型                                 | 1.0      |
 | side          | 是   | enum    | 买卖方向，见:数据字典                    | 1.0      |
 | currency      | 是   | enum    | 币种，见:数据字典                        | 1.0      |
